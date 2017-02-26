@@ -1,0 +1,47 @@
+{% extends 'Layouts/master.twig' %}
+{% block body %}
+<form action="/config" method="POST">
+<label for="parametre">formulaire</label>
+<input type="range" id="parametre1" min="1" value="10" max="100" step="1" oninput="outputUpdate(value)">
+<output for="param" id="param1">10</output>
+
+<input type="range" name="param2" min="1" value="20" max="100" step="1">
+<output for="param" id="param2">15</output>
+
+<input type="range" name="param3" min="1" value="60" max="100" step="1">
+<output for="param" id="param3">52</output>
+
+<input type="range" name="param4" min="1" value="52" max="100" step="1">
+<output for="param" id="param4">29</output>
+
+<input type="range" name="param5" min="1" value="80" max="100" step="1">
+<output for="param" id="param5">32</output>
+</form>
+
+<script>
+	function outputUpdate1(val) 
+	{
+		document.querySelector('#param1').value = val;
+	}
+
+		function outputUpdate2(val) 
+	{
+		document.querySelector('#param2').value = val;
+	}
+
+		function outputUpdate3(val) 
+	{
+		document.querySelector('#param3').value = val;
+	}
+
+		function outputUpdate4(val) 
+	{
+		document.querySelector('#param4').value = val;
+	}
+
+		function outputUpdate5(val) 
+	{
+		document.querySelector('#param5').value = val;
+	}
+</script>
+{%endblock%}
